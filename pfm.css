@@ -1,0 +1,60 @@
+html {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 20px;
+    margin: 20px;
+}
+
+div {
+    margin: 10px;
+}
+
+input {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 20px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+}
+
+button {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 20px;
+    background-color: #0864E8;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    opacity: .7;
+}
+
+.YesBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 20px;
+    background-color: green;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    opacity: .7;
+    margin-right: 10px;
+}
+
+.NoBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 20px;
+    background-color: red;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    opacity: .7;
+}
+
+.YesBtn:hover {opacity: 1;}
+
+.YesBtn:hover:after {opacity: .7;}
+
+.NoBtn:hover {opacity: 1;}
+
+.NoBtn:hover:after {opacity: .7;}
+
+.btn:hover {opacity: 1;}
+
+.btn:hover:after {opacity: .7;}
