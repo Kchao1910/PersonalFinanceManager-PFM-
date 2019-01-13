@@ -1,7 +1,13 @@
 html {
     font-family: 'Major Mono Display', monospace;
-    font-size: 20px;
+    font-size: 1.5vw;
     margin: 20px;
+}
+
+body {
+    text-align: center;
+    border-style: solid;
+    border-color: black;
 }
 
 div {
@@ -10,15 +16,16 @@ div {
 
 input {
     font-family: 'Major Mono Display', monospace;
-    font-size: 20px;
+    font-size: 1.5vw;
     border-radius: 5px;
     border-style: solid;
     border-color: black;
+    width: 15%;
 }
 
 button {
     font-family: 'Major Mono Display', monospace;
-    font-size: 20px;
+    font-size: 1.5vw;
     background-color: #0864E8;
     border-radius: 5px;
     border-style: solid;
@@ -28,7 +35,7 @@ button {
 
 .YesBtn {
     font-family: 'Major Mono Display', monospace;
-    font-size: 20px;
+    font-size: 1.5vw;
     background-color: green;
     border-radius: 5px;
     border-style: solid;
@@ -39,7 +46,7 @@ button {
 
 .NoBtn {
     font-family: 'Major Mono Display', monospace;
-    font-size: 20px;
+    font-size: 1.5vw;
     background-color: red;
     border-radius: 5px;
     border-style: solid;
