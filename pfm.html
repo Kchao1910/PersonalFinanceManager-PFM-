@@ -1,25 +1,28 @@
 <!DOCTYPE html>
+
 <html>
+
     <head>
         <link rel="stylesheet" href="pfm.css">
         <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
         <script asyn src="calculate.js"></script>
     </head>
+
     <body>
+
         <div id="categories">
             Category name<br>
-            <input id="categoryInput" type="text">
-        </div>
-        <div id="budget">
+            <input id="categoryInput" type="text"><br>
             Budget<br>
-            <input id="budgetInput" type="text">
-        </div>
-        <div id="expense">
+            <input id="budgetInput" type="text"><br>
             Expenses<br>
-            <input id="expenseInput" type="text">
-            <br><br>
+            <input id="expenseInput" type="text"><br>
+            <br>
+        </div>
+        <div>
             <button onclick="calculate()" class="btn">Submit</button>
         </div>
+
         <div id ="total">
             <br>
             <p id="finalCategory"></p>
@@ -27,10 +30,13 @@
             <p id="finalExpense"></p>
             <p id="finalTotal"></p>
         </div>
+
         <div>
             <br>
             <p>Would you like to create a csv file for your budget?</p>
             <button id="YB" class="YesBtn" onclick="noDisappear()">Yes</button><button id="NB" class="NoBtn" onclick="yesDisappear()">No</button>
         </div>
+
     </body>
+
 </html>
