@@ -26,28 +26,7 @@ function calculate() {
     } else {
         document.getElementById("finalTotal").innerHTML = ("Whoops: looks like you didn't enter a value for one of the variables.");
     }
-
-
-    // Idea: try making them have consistent classes and iterate over them to calculate final total
-    // Budget/Expenses: finalBudget += budget[i] -> finalTotal = finalBudget - finalExpense
-    // Need to do: find way to store them in csv row format: [Category, Budget, Expense, Total Left]
-    // Need separate buttons for creating new categories etc.
     
-    var budgetList = document.getElementsByClassName("bInput");
-    var expenseList = document.getElementsByClassName("eInput");
-    var i, j, totalBudget, totalExpense;
-
-    for (i = 0; i < budgetList.length; i++) {
-        totalBudget += budgetList[i];
-        totalExpense += expenseList[i];
-    }
-
-    var fTotal = totalBudget - totalExpense;
-
-
-    
-    
-
 }
 
 function cbeGenerator() {
@@ -90,6 +69,7 @@ function cbeGenerator() {
 }
 
 // Need to erase previous calculations
+// Also, inputting nothing will output negative sign for final total
 function calculate2() {
     var budgetList = document.getElementsByClassName("bInput");
     var expenseList = document.getElementsByClassName("eInput");
@@ -99,33 +79,70 @@ function calculate2() {
     var b = parseFloat(budgetTotal);
     var c = parseFloat(expenseTotal);
 
-    for (k = 0; k < budgetList.length; k++) {
-        var a = parseFloat(budgetList[k].value);
-        var d = parseFloat(expenseList[k].value);
-        b = b + a;
-        c = c + d;
-    }
-
-    var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
-    var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
-
-    if (b >= c) {
-        var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
-    } else {
-        var test3 = document.createTextNode("Total Left: -$" + (b-c).toFixed(2));
-    }
-
-    var breakElement4 = document.createElement("br");
-    var breakElement5 = document.createElement("br");
-    var breakElement6 = document.createElement("br");
-
+    var t = document.getElementById("total").hasChildNodes();
     var tot = document.getElementById("total");
-    tot.appendChild(test);
-    tot.appendChild(breakElement4);
-    tot.appendChild(test2);
-    tot.appendChild(breakElement5);
-    tot.appendChild(test3);
-    tot.appendChild(breakElement6);
+
+    if (t == false) {
+        for (k = 0; k < budgetList.length; k++) {
+            var a = parseFloat(budgetList[k].value);
+            var d = parseFloat(expenseList[k].value);
+            b = b + a;
+            c = c + d;
+        }
+    
+        var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
+        var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
+    
+        if (b >= c) {
+            var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
+        } else {
+            var test3 = document.createTextNode("Total Left: -$" + (b-c).toFixed(2));
+        }
+    
+        var breakElement4 = document.createElement("br");
+        var breakElement5 = document.createElement("br");
+        var breakElement6 = document.createElement("br");
+    
+        tot.appendChild(test);
+        tot.appendChild(breakElement4);
+        tot.appendChild(test2);
+        tot.appendChild(breakElement5);
+        tot.appendChild(test3);
+        tot.appendChild(breakElement6);
+
+    } else {
+
+        while (tot.firstChild) {
+            tot.removeChild(tot.firstChild);
+        }
+        
+        for (k = 0; k < budgetList.length; k++) {
+            var a = parseFloat(budgetList[k].value);
+            var d = parseFloat(expenseList[k].value);
+            b = b + a;
+            c = c + d;
+        }
+    
+        var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
+        var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
+    
+        if (b >= c) {
+            var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
+        } else {
+            var test3 = document.createTextNode("Total Left: -$" + (b-c).toFixed(2));
+        }
+    
+        var breakElement4 = document.createElement("br");
+        var breakElement5 = document.createElement("br");
+        var breakElement6 = document.createElement("br");
+    
+        tot.appendChild(test);
+        tot.appendChild(breakElement4);
+        tot.appendChild(test2);
+        tot.appendChild(breakElement5);
+        tot.appendChild(test3);
+        tot.appendChild(breakElement6);
+    }
 }
 
 // Note-to-self: Making the yes button disappear could limit options for the user. 
