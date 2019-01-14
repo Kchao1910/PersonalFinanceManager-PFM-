@@ -10,25 +10,30 @@
 
     <body>
 
+        <div>
+            Click the '+' button to create a new category.
+            <button onclick="cbeGenerator()" class="PlusBtn">+</button><br>
+        </div>
+
         <div id="categories">
             Category name<br>
-            <input id="categoryInput" type="text"><br>
+            <input id="categoryInput" type="text" class="cInput"><br>
             Budget<br>
-            <input id="budgetInput" type="text"><br>
+            <input id="budgetInput" type="text" class="bInput"><br>
             Expenses<br>
-            <input id="expenseInput" type="text"><br>
+            <input id="expenseInput" type="text" class="eInput"><br>
             <br>
         </div>
         <div>
-            <button onclick="calculate()" class="btn">Submit</button>
+            <button onclick="calculate2()" class="btn">Submit</button>
         </div>
 
         <div id ="total">
-            <br>
+            <!-- <br>
             <p id="finalCategory"></p>
             <p id="finalBudget"></p>
             <p id="finalExpense"></p>
-            <p id="finalTotal"></p>
+            <p id="finalTotal"></p> -->
         </div>
 
         <div>
