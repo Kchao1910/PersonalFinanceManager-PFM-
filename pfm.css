@@ -33,6 +33,16 @@ button {
     opacity: .7;
 }
 
+.PlusBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.5vw;
+    background-color: green;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    opacity: .7;
+}
+
 .YesBtn {
     font-family: 'Major Mono Display', monospace;
     font-size: 1.5vw;
@@ -53,6 +63,10 @@ button {
     border-color: black;
     opacity: .7;
 }
+
+.PlusBtn:hover {opacity: 1;}
+
+.PlusBtn:hover:after {opacity: .7;}
 
 .YesBtn:hover {opacity: 1;}
 
