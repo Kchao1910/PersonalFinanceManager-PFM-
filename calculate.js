@@ -28,6 +28,29 @@ function calculate() {
     }
 
 
+    // Idea: try making them have consistent classes and iterate over them to calculate final total
+    // Budget/Expenses: finalBudget += budget[i] -> finalTotal = finalBudget - finalExpense
+    // Need to do: find way to store them in csv row format: [Category, Budget, Expense, Total Left]
+    // Need separate buttons for creating new categories etc.
+    
+    var budgetList = document.getElementsByClassName("bInput");
+    var expenseList = document.getElementsByClassName("eInput");
+    var i, j, totalBudget, totalExpense;
+
+    for (i = 0; i < budgetList.length; i++) {
+        totalBudget += budgetList[i];
+        totalExpense += expenseList[i];
+    }
+
+    var fTotal = totalBudget - totalExpense;
+
+
+    
+    
+
+}
+
+function cbeGenerator() {
     var newCat = document.createTextNode("Category");
     var newBud = document.createTextNode("Budget");
     var newExp = document.createTextNode("Expenses");
@@ -45,6 +68,10 @@ function calculate() {
     var cln4 = breakElement.cloneNode(true);
     var cat = document.getElementById("categories");
 
+    inputElement.setAttribute("class", "cInput");
+    inputElement2.setAttribute("class", "bInput");
+    inputElement3.setAttribute("class", "eInput");
+
     cat.appendChild(newCat);
     cat.appendChild(breakElement);
     cat.appendChild(inputElement);
@@ -60,11 +87,45 @@ function calculate() {
     cat.appendChild(inputElement3);
     cat.appendChild(cln3);
     cat.appendChild(cln4);
-    
-    
-    
-    
+}
 
+// Need to erase previous calculations
+function calculate2() {
+    var budgetList = document.getElementsByClassName("bInput");
+    var expenseList = document.getElementsByClassName("eInput");
+    var k;
+    var budgetTotal = 0;
+    var expenseTotal = 0;
+    var b = parseFloat(budgetTotal);
+    var c = parseFloat(expenseTotal);
+
+    for (k = 0; k < budgetList.length; k++) {
+        var a = parseFloat(budgetList[k].value);
+        var d = parseFloat(expenseList[k].value);
+        b = b + a;
+        c = c + d;
+    }
+
+    var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
+    var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
+
+    if (b >= c) {
+        var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
+    } else {
+        var test3 = document.createTextNode("Total Left: -$" + (b-c).toFixed(2));
+    }
+
+    var breakElement4 = document.createElement("br");
+    var breakElement5 = document.createElement("br");
+    var breakElement6 = document.createElement("br");
+
+    var tot = document.getElementById("total");
+    tot.appendChild(test);
+    tot.appendChild(breakElement4);
+    tot.appendChild(test2);
+    tot.appendChild(breakElement5);
+    tot.appendChild(test3);
+    tot.appendChild(breakElement6);
 }
 
 // Note-to-self: Making the yes button disappear could limit options for the user. 
