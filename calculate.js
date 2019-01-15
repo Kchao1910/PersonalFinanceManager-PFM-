@@ -66,8 +66,10 @@ function calculate2() {
     
         if (b >= c) {
             var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
+        } else if (b < c) {
+            var test3 = document.createTextNode("Total Left: -$" + Math.abs(b-c).toFixed(2));
         } else {
-            var test3 = document.createTextNode("Total Left: -$" + (b-c).toFixed(2));
+            var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
         }
     
         var breakElement4 = document.createElement("br");
@@ -97,14 +99,16 @@ function calculate2() {
             c = c + d;
         }
     
-        var monthHeader = document.createTextNode("Budget for " + monthName);
+        var monthHeader = document.createTextNode(monthName + " Overview");
         var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
         var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
     
         if (b >= c) {
             var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
+        } else if (b < c) {
+            var test3 = document.createTextNode("Total Left: -$" + Math.abs(b-c).toFixed(2));
         } else {
-            var test3 = document.createTextNode("Total Left: -$" + (b-c).toFixed(2));
+            var test3 = document.createTextNode("Total Left: $" + (b-c).toFixed(2));
         }
     
         var breakElement4 = document.createElement("br");
@@ -121,15 +125,4 @@ function calculate2() {
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
     }
-}
-
-// Note-to-self: Making the yes button disappear could limit options for the user. 
-// Example: User clicks on 'No' button by mistake and can no longer create a csv file.
-// Decision: 'No' button doesn't really do anything, thus, just leave both on in the future
-function noDisappear() {
-    document.getElementById("NB").style.display = "none";
-}
-
-function yesDisappear() {
-    document.getElementById("YB").style.display = "none";
 }
