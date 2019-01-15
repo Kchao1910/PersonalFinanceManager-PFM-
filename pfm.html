@@ -10,9 +10,29 @@
 
     <body>
 
+        <h1>PFM</h1>
+
+        <div>
+            Select the month you would like to set a budget for.
+            <select name="monthName" id="monthList" class="mN">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+
         <div>
             Click the '+' button to create a new category.
-            <button onclick="cbeGenerator()" class="PlusBtn">+</button><br>
+            <button onclick="cbeGenerator()" class="PlusBtn">+</button><br><br>
         </div>
 
         <div id="categories">
@@ -24,14 +44,14 @@
             <input id="expenseInput" type="text" class="eInput"><br>
             <br>
         </div>
+
         <div>
-            <button onclick="calculate2()" class="btn">Submit</button>
+            <button onclick="calculate2()" class="btn">Submit</button><br><br>
         </div>
 
         <div id ="total"></div>
 
         <div>
-            <br>
             <p>Would you like to create a csv file for your budget?</p>
             <button id="YB" class="YesBtn" onclick="noDisappear()">Yes</button><button id="NB" class="NoBtn" onclick="yesDisappear()">No</button>
         </div>
