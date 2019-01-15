@@ -40,10 +40,11 @@ function cbeGenerator() {
 // Need to erase previous calculations
 // Also, inputting nothing will output negative sign for final total
 function calculate2() {
+    var catList = document.getElementsByClassName("cInput");
     var budgetList = document.getElementsByClassName("bInput");
     var expenseList = document.getElementsByClassName("eInput");
     var monthName = document.getElementById("monthList").value;
-    var k;
+    var i, j, k;
     var budgetTotal = 0;
     var expenseTotal = 0;
     var b = parseFloat(budgetTotal);
@@ -51,6 +52,28 @@ function calculate2() {
 
     var t = document.getElementById("total").hasChildNodes();
     var tot = document.getElementById("total");
+
+    var cL = [];
+    var bL = [];
+    var eL = [];
+    var tL = [];
+    
+    var row = [];
+
+    for (i = 0; i < catList.length; i++) {
+        var w = catList[i].value;
+        cL[i] = w;
+        var x = parseFloat(budgetList[i].value);
+        bL[i] = x;
+        var y = parseFloat(expenseList[i].value);
+        eL[i] = y;
+        var z = x - y;
+        tL[i] = z;
+    }
+
+    for (j = 0; j < cL.length; j++) {
+        row[j] = [cL[j], bL[j], eL[j], tL[j]];
+    }
 
     if (t == false) {
         for (k = 0; k < budgetList.length; k++) {
@@ -85,6 +108,8 @@ function calculate2() {
         tot.appendChild(breakElement5);
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
+
+        console.log(cL," ",bL," ",eL," ",tL," ",row);
 
     } else {
 
@@ -124,5 +149,7 @@ function calculate2() {
         tot.appendChild(breakElement5);
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
+
+        console.log(cL," ",bL," ",eL," ",tL," ",row);
     }
 }
