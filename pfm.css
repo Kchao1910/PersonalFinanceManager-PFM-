@@ -1,7 +1,7 @@
 html {
     font-family: 'Major Mono Display', monospace;
     font-size: 1.5vw;
-    margin: 20px;
+    margin: 20px 12.5% 20px 12.5%;
 }
 
 body {
@@ -12,6 +12,15 @@ body {
 
 div {
     margin: 10px;
+}
+
+select {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.5vw;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    width: 15%;
 }
 
 input {
