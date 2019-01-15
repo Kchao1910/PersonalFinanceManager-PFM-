@@ -52,7 +52,7 @@ button {
     opacity: .7;
 }
 
-.YesBtn {
+.ChkBtn {
     font-family: 'Major Mono Display', monospace;
     font-size: 1.5vw;
     background-color: green;
@@ -60,7 +60,6 @@ button {
     border-style: solid;
     border-color: black;
     opacity: .7;
-    margin-right: 10px;
 }
 
 .NoBtn {
@@ -77,9 +76,9 @@ button {
 
 .PlusBtn:hover:after {opacity: .7;}
 
-.YesBtn:hover {opacity: 1;}
+.ChkBtn:hover {opacity: 1;}
 
-.YesBtn:hover:after {opacity: .7;}
+.ChkBtn:hover:after {opacity: .7;}
 
 .NoBtn:hover {opacity: 1;}
 
