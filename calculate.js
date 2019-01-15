@@ -1,34 +1,3 @@
-function calculate() {
-
-    // 4 values must be retrieved in order to output correctly
-    // Category name retrieval
-    var categoryValue = document.getElementById("categoryInput").value;
-    
-    // Budget input retieval
-    var budgetValue = parseFloat(document.getElementById("budgetInput").value).toFixed(2);
-
-    // Expense input retrieval
-    var expenseValue = parseFloat(document.getElementById("expenseInput").value).toFixed(2);
-
-    // Calculate budget left over
-    var totalValue = budgetValue - expenseValue;
-
-    // Output: Category, Budget, Expenses, Total
-    document.getElementById("finalCategory").innerHTML = ('Category name: ' + categoryValue);
-    document.getElementById("finalBudget").innerHTML = ('Budget: $' + budgetValue);
-    document.getElementById("finalExpense").innerHTML = ('Expense: $' + expenseValue);
-
-    // Determines whether user is under budget or overbudget
-    if (totalValue >= 0) {
-        document.getElementById("finalTotal").innerHTML = ('Total: $' + totalValue.toFixed(2));
-    } else if (totalValue < 0) {
-        document.getElementById("finalTotal").innerHTML = ('Total: -$' + Math.abs(totalValue.toFixed(2)) + ' (You\'re overbudget by $' + Math.abs(totalValue.toFixed(2)) + ')');
-    } else {
-        document.getElementById("finalTotal").innerHTML = ("Whoops: looks like you didn't enter a value for one of the variables.");
-    }
-    
-}
-
 function cbeGenerator() {
     var newCat = document.createTextNode("Category");
     var newBud = document.createTextNode("Budget");
@@ -73,6 +42,7 @@ function cbeGenerator() {
 function calculate2() {
     var budgetList = document.getElementsByClassName("bInput");
     var expenseList = document.getElementsByClassName("eInput");
+    var monthName = document.getElementById("monthList").value;
     var k;
     var budgetTotal = 0;
     var expenseTotal = 0;
@@ -89,7 +59,8 @@ function calculate2() {
             b = b + a;
             c = c + d;
         }
-    
+        
+        var monthHeader = document.createTextNode(monthName + " Overview");
         var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
         var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
     
@@ -102,7 +73,10 @@ function calculate2() {
         var breakElement4 = document.createElement("br");
         var breakElement5 = document.createElement("br");
         var breakElement6 = document.createElement("br");
+        var breakElement7 = document.createElement("br");
     
+        tot.appendChild(monthHeader);
+        tot.appendChild(breakElement7);
         tot.appendChild(test);
         tot.appendChild(breakElement4);
         tot.appendChild(test2);
@@ -123,6 +97,7 @@ function calculate2() {
             c = c + d;
         }
     
+        var monthHeader = document.createTextNode("Budget for " + monthName);
         var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
         var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
     
@@ -135,7 +110,10 @@ function calculate2() {
         var breakElement4 = document.createElement("br");
         var breakElement5 = document.createElement("br");
         var breakElement6 = document.createElement("br");
+        var breakElement7 = document.createElement("br");
     
+        tot.appendChild(monthHeader);
+        tot.appendChild(breakElement7);
         tot.appendChild(test);
         tot.appendChild(breakElement4);
         tot.appendChild(test2);
