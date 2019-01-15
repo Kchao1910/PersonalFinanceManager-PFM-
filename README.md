@@ -14,6 +14,7 @@ NPM 6.1.0
 2) Budget Calculations (Completed)
 3) CSV File Download (Inomplete)
 4) Dynamic Data Visualization (Not Started)
+5) Firebase Authentication and Data Storage (Not Started)
 
 # Functionalities in Consideration for Future Releases
 1) Investment Calculator
