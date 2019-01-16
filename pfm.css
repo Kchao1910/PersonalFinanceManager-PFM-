@@ -29,7 +29,15 @@ input {
     border-radius: 5px;
     border-style: solid;
     border-color: black;
-    width: 15%;
+    width: 19%;
+}
+
+.csvInput {
+    margin-left: 4.5%;
+}
+
+.pChart {
+    text-align: center;
 }
 
 button {
