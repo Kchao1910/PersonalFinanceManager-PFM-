@@ -5,6 +5,7 @@
     <head>
         <link rel="stylesheet" href="pfm.css">
         <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script asyn src="pfm.js"></script>
     </head>
 
@@ -48,13 +49,16 @@
             <button onclick="calculate2()" class="btn">Submit</button><br><br>
         </div>
 
-        <div id ="total"></div>
+        <div id ="total"></div><br>
 
+        <div id="piechart" class="pChart"></div>
+
+        <br>
         <div>
-            <h2>Optional</h2>
+            <h4>(Optional)</h4>
             Enter in the name you would like to call your csv file.<br>
             Then click the '&#10003' button to download the csv file.<br>
-            <input id="csvName" type="text">
+            <input id="csvName" type="text" class="csvInput">
             <button id="CB" class="ChkBtn" onclick="csvGenerate()">&#10003</button>
         </div>
         
