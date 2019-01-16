@@ -86,6 +86,53 @@ function calculate2() {
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
 
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+      
+        function drawChart() {
+            var catList = document.getElementsByClassName("cInput");
+            var budgetList = document.getElementsByClassName("bInput");
+
+            var cL = [];
+            var bL = [];
+
+            var l;
+
+            for (l = 0; l < catList.length; l++) {
+                var w = catList[l].value;
+                cL[l] = w;
+                var x = parseFloat(budgetList[l].value);
+                bL[l] = x;
+            }
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Category');
+            data.addColumn('number', 'Budget');
+
+            var z;
+
+            for (z = 0; z < cL.length; z++) {
+                 data.addRow([cL[z], bL[z]]);
+            }
+
+            var options = {
+                fontName: 'Major Mono Display',
+                backgroundColor: 'transparent',
+                chartArea: {
+                    left: '20%',
+                    right: '20%',
+                    width: '100%',
+                    height: '90%'
+                },
+                legend: {
+                    fontName: 'Major Mono Display',
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
 
     } else {
 
@@ -125,7 +172,54 @@ function calculate2() {
         tot.appendChild(breakElement5);
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
- 
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+      
+        function drawChart() {
+            var catList = document.getElementsByClassName("cInput");
+            var budgetList = document.getElementsByClassName("bInput");
+
+            var cL = [];
+            var bL = [];
+
+            var l;
+
+            for (l = 0; l < catList.length; l++) {
+                var w = catList[l].value;
+                cL[l] = w;
+                var x = parseFloat(budgetList[l].value);
+                bL[l] = x;
+            }
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Category');
+            data.addColumn('number', 'Budget');
+
+            var z;
+
+            for (z = 0; z < cL.length; z++) {
+                 data.addRow([cL[z], bL[z]]);
+            }
+
+            var options = {
+                fontName: 'Major Mono Display',
+                backgroundColor: 'transparent',
+                chartArea: {
+                    left: "20%",
+                    right: "20%",
+                    width: "100%",
+                    height: "90%"
+                },
+                legend: {
+                    fontName: 'Major Mono Display',
+                }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
     }
 }
 
