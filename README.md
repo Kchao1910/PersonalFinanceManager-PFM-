@@ -7,7 +7,7 @@ PFM uses elements such as drop-down lists, input boxes, and buttons to create a 
 
 # Pre-requisites
 Node.js (v10.15.0 used)<br>
-NPM (6.4.1 used)
+npm (6.4.1 used)
 
 # Project Goals
 1) UI (Working-version)
