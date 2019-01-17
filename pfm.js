@@ -284,5 +284,7 @@ function csvGenerate() {
     link.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
     link.target = '_blank';
     link.download = csvFileName + ".csv";
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
 }
