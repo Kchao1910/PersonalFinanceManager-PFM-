@@ -60,6 +60,7 @@ function calculate2() {
             c = c + d;
         }
         
+        var mH = document.createElement("span");
         var monthHeader = document.createTextNode(monthName + " Overview");
         var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
         var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
@@ -76,13 +77,22 @@ function calculate2() {
         var breakElement5 = document.createElement("br");
         var breakElement6 = document.createElement("br");
         var breakElement7 = document.createElement("br");
-    
-        tot.appendChild(monthHeader);
+        var breakElement8 = document.createElement("br");
+        var breakElement9 = document.createElement("br");
+        var breakElement10 = document.createElement("br");
+
+        tot.appendChild(mH);
+        mH.appendChild(monthHeader);
+        mH.style.textDecoration = "underline";
+        
         tot.appendChild(breakElement7);
+        tot.appendChild(breakElement8);
         tot.appendChild(test);
         tot.appendChild(breakElement4);
+        tot.appendChild(breakElement9);
         tot.appendChild(test2);
         tot.appendChild(breakElement5);
+        tot.appendChild(breakElement10);
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
 
@@ -147,6 +157,7 @@ function calculate2() {
             c = c + d;
         }
     
+        var mH = document.createElement("span");
         var monthHeader = document.createTextNode(monthName + " Overview");
         var test = document.createTextNode("Total Budget: $" + b.toFixed(2));
         var test2 = document.createTextNode("Total Expenses: $" + c.toFixed(2));
@@ -163,13 +174,22 @@ function calculate2() {
         var breakElement5 = document.createElement("br");
         var breakElement6 = document.createElement("br");
         var breakElement7 = document.createElement("br");
-    
-        tot.appendChild(monthHeader);
+        var breakElement8 = document.createElement("br");
+        var breakElement9 = document.createElement("br");
+        var breakElement10 = document.createElement("br");
+
+        tot.appendChild(mH);
+        mH.appendChild(monthHeader);
+        mH.style.textDecoration = "underline";
+        
         tot.appendChild(breakElement7);
+        tot.appendChild(breakElement8);
         tot.appendChild(test);
         tot.appendChild(breakElement4);
+        tot.appendChild(breakElement9);
         tot.appendChild(test2);
         tot.appendChild(breakElement5);
+        tot.appendChild(breakElement10);
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
 
