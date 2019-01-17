@@ -14,6 +14,11 @@ div {
     margin: 10px;
 }
 
+p {
+    font-size: .67em;
+    font-weight: bold;
+}
+
 select {
     font-family: 'Major Mono Display', monospace;
     font-size: 1.5vw;
