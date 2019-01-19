@@ -21,5 +21,5 @@ npm (6.4.1 used)<br>
 7) Browser Compatibility (In Progress)
 
 # Functionalities in Consideration for Future Releases
-1) Investment Calculator
-2) Financial Goal Tracker
+1) Investment Calculator (In Progress)
+2) Financial Goal Tracker (In Progress)
