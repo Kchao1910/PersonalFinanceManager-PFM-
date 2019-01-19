@@ -1,0 +1,66 @@
+html {
+    font-family: 'Major Mono Display', monospace;
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100%;
+    border-style: solid;
+    font-size: 1.5vw;
+}
+
+.Title {
+    font-size: 1.5vw;
+    padding: 15px;
+    background-color: #4EE870;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-style: solid;
+}
+
+.budgetBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.5vw;
+    background-color: #0977FF;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    opacity: .9;
+    padding:15px;
+    margin-right: 10%;
+}
+
+.investBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.5vw;
+    background-color: #FF3A5B;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    opacity: .9;
+    padding: 15px;
+}
+
+.goalBtn {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1.5vw;
+    background-color: #FFA612;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    opacity: .9;
+    padding: 15px;
+    margin-left: 10%;
+}
+
+.elaboration {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.budgetBtn:hover {opacity: 1;}
+.budgetBtn:hover:after {opacity: .9;}
+.investBtn:hover {opacity: 1}
+.investBtn:hover:after {opacity: .9;}
+.goalBtn:hover {opacity: 1;}
+.goalBtn:hover::after {opacity: .9;}
