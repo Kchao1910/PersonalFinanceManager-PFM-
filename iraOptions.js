@@ -363,6 +363,24 @@ function notQualified() {
 
 // Displays annual appreciation of assests, assuming positive avg. annual returns
 function displayResults() {
+    var body = document.getElementById("parent");
+    var div10 = document.createElement("div");
+    var portfolioChart = document.createElement("div");
+    var projectGrowth = document.createTextNode("Projected Growth");
+
+    div10.style.width = "90%";
+    div10.style.marginLeft = "5%";
+    div10.style.marginRight = "5%";
+    div10.style.borderStyle = "solid";
+    div10.id = "portfolio_Div";
+
+    portfolioChart.id = "portfolio_Chart";
+    body.appendChild(div10);
+
+    body.appendChild(portfolioChart);
+    div10.appendChild(projectGrowth);
+    div10.appendChild(portfolioChart)
+
     var result1 = parseFloat(document.getElementById("401K_Income_Input").value);
     var result2 = parseFloat(document.getElementById("401K_EmpMatch_Input").value);
     var result3 = parseFloat(document.getElementById("401K_Contribution_Input").value);
@@ -397,18 +415,66 @@ function displayResults() {
     var z = result6;
     var inc = 0;
 
+    rowList[0]= [incrementer.toString(), 0, 0, 0, result6];
+
     for (incrementer; incrementer < endYear; incrementer++) {
         x = (x + maxContribution401K) * result10;
         y = (y + result13) * result11;
         z = (z * result8) + result7;
         w = (w + result5) * result12;
 
-        rowList[inc] = [incrementer + "-" + (incrementer + 1), x.toFixed(2), y.toFixed(2), w.toFixed(2), z.toFixed(2)];
+        rowList[inc+1] = [(incrementer+1).toString(), parseFloat(x.toFixed(2)), parseFloat(y.toFixed(2)), parseFloat(w.toFixed(2)), parseFloat(z.toFixed(2))];
         inc = inc + 1;
     }
 
     for (var k = 0; k < rowList.length; k++) {
         console.log(rowList[k]);
+    }
+
+    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(drawPortfolioChart);
+
+    function drawPortfolioChart() {
+
+        var portfolioData = new google.visualization.DataTable();
+        portfolioData.addColumn("string", "Year");
+        portfolioData.addColumn("number", "401K");
+        portfolioData.addColumn("number", "IRA");
+        portfolioData.addColumn("number", "Stocks");
+        portfolioData.addColumn("number", "Real Estate");
+
+        var p;
+
+        for (p = 0; p < rowList.length; p++) {
+            portfolioData.addRow(rowList[p]);
+        }
+
+        var options = {
+            fontName: 'Major Mono Display',
+            backgroundColor: 'transparent',
+            vAxis: {
+                title: "amount"
+            },
+            hAxis: {
+                title: "year"
+            },
+            width: 750,
+            height: 650,
+            chartArea: {
+                top: "5%",
+                left: '38%',
+                //right: '0%',
+            },
+            legend: {
+                fontName: 'Major Mono Display',
+                position: 'bottom'
+            }
+        };
+
+
+        var chart = new google.visualization.LineChart(document.getElementById('portfolio_Chart'));
+
+        chart.draw(portfolioData, options);
     }
 }
 
