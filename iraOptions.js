@@ -361,6 +361,57 @@ function notQualified() {
     boxIRA.appendChild(b20);
 }
 
+// Displays annual appreciation of assests, assuming positive avg. annual returns
+function displayResults() {
+    var result1 = parseFloat(document.getElementById("401K_Income_Input").value);
+    var result2 = parseFloat(document.getElementById("401K_EmpMatch_Input").value);
+    var result3 = parseFloat(document.getElementById("401K_Contribution_Input").value);
+    var result4 = parseFloat(document.getElementById("stocks_principleAmt_Input").value);
+    var result5 = parseFloat(document.getElementById("stocks_annualContribution_Input").value);
+    var result6 = parseFloat(document.getElementById("RE_houseValue_Input").value);
+    var result7 = parseFloat(document.getElementById("RE_rentalIncome_Input").value);
+    var result8 = parseFloat(document.getElementById("RE_annualAppreciation_Input").value);
+    var result9 = parseFloat(document.getElementById("num_Years").value);
+    var result10 = parseFloat(document.getElementById("ror_401K_Input").value);
+    var result11 = parseFloat(document.getElementById("ror_IRA_Input").value);
+    var result12 = parseFloat(document.getElementById("ror_Stocks_Input").value);
+
+    var result13 = parseFloat(document.getElementById("contribution_Range").value);
+
+    var rowList = [];
+    var incrementer = 2019;
+    var endYear = incrementer + result9;
+    var maxContribution401K = 0;
+    var userContribution401K = result1 / result3;
+
+
+    if (userContribution401K <= result2) {
+        maxContribution401K = result3 * 2;
+    } else {
+        maxContribution401K = result3 + (result1 * result2);
+    }
+
+    var w = result4;
+    var x = 0;
+    var y = 0;
+    var z = result6;
+    var inc = 0;
+
+    for (incrementer; incrementer < endYear; incrementer++) {
+        x = (x + maxContribution401K) * result10;
+        y = (y + result13) * result11;
+        z = (z * result8) + result7;
+        w = (w + result5) * result12;
+
+        rowList[inc] = [incrementer + "-" + (incrementer + 1), x.toFixed(2), y.toFixed(2), w.toFixed(2), z.toFixed(2)];
+        inc = inc + 1;
+    }
+
+    for (var k = 0; k < rowList.length; k++) {
+        console.log(rowList[k]);
+    }
+}
+
 // This function removes all content from the IRA box so that new elements won't collide with old ones
 // Note: already have very similar function, possible solution: function takes in desired parent node ...
 function ira_RemoveNodes() {
