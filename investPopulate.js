@@ -203,6 +203,8 @@ function investPop() {
     var b96 = document.createElement("br");
     var b97 = document.createElement("br");
     var b98 = document.createElement("br");
+    var b99 = document.createElement("br");
+    var b101 = document.createElement("br");
     // innerHTML for buttons
     /* btn401K.innerHTML = "401K";
     btnIRA.innerHTML = "IRA";
@@ -311,5 +313,7 @@ function investPop() {
     boxSubmit.appendChild(b97);
     boxSubmit.appendChild(b98);
     boxSubmit.appendChild(resultsBtn);
+    boxSubmit.appendChild(b99);
+    boxSubmit.appendChild(b101);
 
 }
