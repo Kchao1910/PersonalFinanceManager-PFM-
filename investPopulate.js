@@ -10,9 +10,8 @@ function investPop() {
     var box401K = document.createElement("div");
     var boxIRA = document.createElement("div");
     var boxStocks = document.createElement("div");
-    var boxMF = document.createElement("div");
-    var boxBonds = document.createElement("div");
     var boxRE = document.createElement("div");
+    var boxSubmit = document.createElement("div");
 
     // Styling main boxes
     pHeader.innerHTML = "Portfolio";
@@ -23,13 +22,20 @@ function investPop() {
     box401K.style.marginLeft = "5%";
     box401K.style.marginRight = "5%";
     box401K.style.borderStyle = "solid";
-    box401K.innerHTML = "401k"
+    box401K.innerHTML = "401k";
+
     var income = document.createTextNode("income");
     var inp401K = document.createElement("input");
     var cont401K = document.createTextNode("employer match");
     var inp401K2 = document.createElement("input");
     var contributionTxt = document.createTextNode("contribution" );
     var inp401K3 = document.createElement("input");
+
+    inp401K.id = "401K_Income_Input";
+    inp401K2.id = "401K_EmpMatch_Input";
+    inp401K3.id = "401K_Contribution_Input";
+
+
     inp401K.style.width = "17.5%";
     inp401K.style.textAlign = "center";
     inp401K2.style.width = "17.5%";
@@ -68,19 +74,13 @@ function investPop() {
     var inpStocks = document.createElement("input");
     var inpStocks2 = document.createElement("input");
 
-    // Mutual Funds
-    boxMF.style.width = "90%";
-    boxMF.style.marginLeft = "5%";
-    boxMF.style.marginRight = "5%";
-    boxMF.style.borderStyle = "solid";
-    boxMF.innerHTML = "Mutual Funds";
+    inpStocks.id = "stocks_principleAmt_Input";
+    inpStocks2.id = "stocks_annualContribution_Input";
 
-    // Bonds
-    boxBonds.style.width = "90%";
-    boxBonds.style.marginLeft = "5%";
-    boxBonds.style.marginRight = "5%";
-    boxBonds.style.borderStyle = "solid";
-    boxBonds.innerHTML = "Bonds";
+    inpStocks.style.width = "17.5%";
+    inpStocks.style.textAlign = "center";
+    inpStocks2.style.width = "17.5%";
+    inpStocks2.style.textAlign = "center";
 
     // Real Estate
     boxRE.style.width = "90%";
@@ -94,19 +94,59 @@ function investPop() {
     var inpRE = document.createElement("input");
     var inpRE2 = document.createElement("input");
     var inpRE3 = document.createElement("input");
+
+    inpRE.id = "RE_houseValue_Input";
+    inpRE2.id = "RE_rentalIncome_Input";
+    inpRE3.id = "RE_annualAppreciation_Input";
+
+    inpRE.style.width = "17.5%";
+    inpRE.style.textAlign = "center";
+    inpRE2.style.width = "17.5%";
+    inpRE2.style.textAlign = "center";
+    inpRE3.style.width = "17.5%";
+    inpRE3.style.textAlign = "center";
+
+    // Submit Section/ Display Results
+    boxSubmit.style.width = "90%";
+    boxSubmit.style.marginLeft = "5%";
+    boxSubmit.style.marginRight = "5%";
+    boxSubmit.style.borderStyle = "solid";
+    boxSubmit.innerHTML = "Results";
+
+    var yearsTxt = document.createTextNode("years to invest");
+    var ror401KTxt = document.createTextNode("401K annual rate");
+    var rorIRATxt = document.createTextNode("iRA annual rate");
+    var rorStocksTxt = document.createTextNode("stocks annual rate");
+
+    var Years = document.createElement("input");
+    var rateOfReturn401K = document.createElement("input");
+    var rateOfReturnIRA = document.createElement("input");
+    var rateOfReturnStocks = document.createElement("input");
+    var resultsBtn = document.createElement("button");
+
+    Years.id = "num_Years";
+    rateOfReturn401K.id = "ror_401K_Input";
+    rateOfReturnIRA.id = "ror_IRA_Input";
+    rateOfReturnStocks.id = "ror_Stocks_Input";
+
+
+    resultsBtn.innerHTML = "Submit";
+    resultsBtn.onclick = function() {
+        displayResults();
+    }
+
+    Years.style.width = "17.5%";
+    Years.style.textAlign = "center";
+    rateOfReturn401K.style.width = "17.5%";
+    rateOfReturn401K.style.textAlign = "center";
+    rateOfReturnIRA.style.width = "17.5%";
+    rateOfReturnIRA.style.textAlign = "center";
+    rateOfReturnStocks.style.width = "17.5%";
+    rateOfReturnStocks.style.textAlign = "center";
     
     // Instruction text
     var IP = document.createTextNode("page is still in development.");
-    var investDisclaimer = document.createTextNode("note: this is for education and not your financial planner.");
-    var optionTxt = document.createTextNode("Click on a option below to add to your portfolio.")
-
-    // Button creation
-    //var btn401K = document.createElement("button");
-    //var btnIRA = document.createElement("button");
-    //var btnStocks = document.createElement("button");
-    //var btnMF = document.createElement("button");
-    //var btnBonds = document.createElement("button");
-    //var btnRE = document.createElement("button");
+    var investDisclaimer = document.createTextNode("note: this is for education and is not a replacement for a cpa.");
 
     // break creation
     var b1 = document.createElement("br");
@@ -151,6 +191,18 @@ function investPop() {
     var b42 = document.createElement("br");
     var b43 = document.createElement("br");
 
+    // display breaks
+    var b44 = document.createElement("br");
+    var b45 = document.createElement("br");
+    var b90 = document.createElement("br");
+    var b91 = document.createElement("br");
+    var b92 = document.createElement("br");
+    var b93 = document.createElement("br");
+    var b94 = document.createElement("br");
+    var b95 = document.createElement("br");
+    var b96 = document.createElement("br");
+    var b97 = document.createElement("br");
+    var b98 = document.createElement("br");
     // innerHTML for buttons
     /* btn401K.innerHTML = "401K";
     btnIRA.innerHTML = "IRA";
@@ -171,16 +223,6 @@ function investPop() {
     body.appendChild(IP);
     body.appendChild(b43);
     body.appendChild(investDisclaimer);
-    /* body.appendChild(b1);
-    body.appendChild(optionTxt);
-    body.appendChild(b2);
-    body.appendChild(b3);
-    body.appendChild(btn401K);
-    body.appendChild(btnIRA);
-    body.appendChild(btnStocks);
-    body.appendChild(btnMF);
-    body.appendChild(btnBonds);
-    body.appendChild(btnRE); */
     body.appendChild(portfolio);
 
     // start of portfolio section
@@ -188,10 +230,8 @@ function investPop() {
     portfolio.appendChild(box401K);
     portfolio.appendChild(boxIRA);
     portfolio.appendChild(boxStocks);
-    //portfolio.appendChild(b4);
-    //portfolio.appendChild(boxMF);
-    //portfolio.appendChild(boxBonds);
     portfolio.appendChild(boxRE);
+    portfolio.appendChild(boxSubmit);
 
     // 401K
     box401K.appendChild(b5)
@@ -249,5 +289,27 @@ function investPop() {
     boxRE.appendChild(inpRE3);
     boxRE.appendChild(b41);
     boxRE.appendChild(b42);
+
+    // Results
+    boxSubmit.appendChild(b44);
+    boxSubmit.appendChild(b45);
+    boxSubmit.appendChild(yearsTxt);
+    boxSubmit.appendChild(b90);
+    boxSubmit.appendChild(Years);
+    boxSubmit.appendChild(b91);
+    boxSubmit.appendChild(ror401KTxt);
+    boxSubmit.appendChild(b92);
+    boxSubmit.appendChild(rateOfReturn401K);
+    boxSubmit.appendChild(b93);
+    boxSubmit.appendChild(rorIRATxt);
+    boxSubmit.appendChild(b94);
+    boxSubmit.appendChild(rateOfReturnIRA);
+    boxSubmit.appendChild(b95);
+    boxSubmit.appendChild(rorStocksTxt);
+    boxSubmit.appendChild(b96);
+    boxSubmit.appendChild(rateOfReturnStocks);
+    boxSubmit.appendChild(b97);
+    boxSubmit.appendChild(b98);
+    boxSubmit.appendChild(resultsBtn);
 
 }
