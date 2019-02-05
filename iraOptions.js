@@ -375,11 +375,13 @@ function displayResults() {
     div10.id = "portfolio_Div";
 
     portfolioChart.id = "portfolio_Chart";
-    body.appendChild(div10);
 
-    body.appendChild(portfolioChart);
-    div10.appendChild(projectGrowth);
-    div10.appendChild(portfolioChart)
+    if (body.childElementCount == 5) {
+        body.appendChild(div10);
+        body.appendChild(portfolioChart);
+        div10.appendChild(projectGrowth);
+        div10.appendChild(portfolioChart);
+    }
 
     var result1 = parseFloat(document.getElementById("401K_Income_Input").value);
     var result2 = parseFloat(document.getElementById("401K_EmpMatch_Input").value);
