@@ -1,20 +1,58 @@
-# PersonalFinanceManager-PFM-
+# PersonalFinanceManager (PFM-SYM)
 
-This web application allows a user to create a monthly budget by defining categories, budgets, and expenses. As an option, users can download a csv file of their budget.
+PFM-SYM (Personal Finance Manager - Save Your Money) is a web application focused on providing simple functionalities geared towards personal finance.
 
-# Introduction
-PFM uses elements such as drop-down lists, input boxes, and buttons to create a dynamic web page. First, the user selects a month from the drop-down list. Second, the user can dynamically generate new categories by clicking on the green '+' button located near the top-right part of the web page. Third, the user enters in the category name(s), budget(s), and expenses. Fourth, the user must click on the 'Submit' button to calculate and display their monthly budget.
+The goal of PFM-SYM is to allow users to visualize their finances through a simple and easy process.
 
+# Features
+* Monthly Budget Creation
+* CSV File Download (only for budgets at the moment)
+* Simulated Assest Growth
+* Financial Goal Tracking (in progress)
+* Data Visualization
+
+# Requirements
+* Modern Browser (tested on Chrome, Mozilla Firefox, and Edge)
+* Download and save all files in this repository
+
+# Getting Started
+* Clone the latest version of the PFM repository.<br>
+    >git clone https://github.com/Kchao1910/PersonalFinanceManager-PFM-.git
+* Once you saved the files, open pfm.html on either Chrome, Mozilla Firefox, or Edge.
+
+# Tutorial
+There are 3 main functionalities features in this web application:<br>
+
+1) Budgeting
+2) Portfolio Creation
+3) Goal Tracking
+
+**Budgeting**
+1) Select month to set budget for.
+2) Choose amount of categories to include in budget.
+3) Enter in the category names, budget(s), and expenses.
+4) Click the submit button.
+5) Enter in the name of the CSV file. (Optional)
+
+**Portfolio Creation**
+
+1) Enter in your income, employer match, and contribution in the 401K section.
+2) Adjust the slider to set your IRA contribution (if income qualifies)
+3) Enter in the principle amount and annual contribution in the stocks section.
+4) Enter in the value of a property, rental income, and annual appreciation in the real estate section.
+5) Enter in the rate of returns for all assests.
+6) Click the submit button to see your data visualized as a line graph.
+
+**Goal Tracking**
+
+(In Progress)
 # Project Goals
-1) UI (Working-version)
-2) Budget Calculations (Completed)
-3) CSV File Download (Completed)
-4) Update Existing CSV Files (Not Started)
-4) Dynamic Data Visualization (Completed)
-5) Firebase Authentication and Data Storage (Started)
-6) Error Checking (In Progress)
-7) Browser Compatibility (In Progress)
+* Simple UI (Working-version)
+* Budget Calculations (Completed)
+* CSV File Download (Completed)
+* Update Existing CSV Files (Not Started)
+* Dynamic Data Visualization (Completed)
+* Firebase Authentication and Data Storage (Started)
+* Error Checking (In Progress)
+* Browser Compatibility (In Progress)
 
-# Functionalities in Consideration for Future Releases
-1) Investment Calculator (In Progress)
-2) Financial Goal Tracker (In Progress)
