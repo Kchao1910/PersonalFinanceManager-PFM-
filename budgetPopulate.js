@@ -11,7 +11,7 @@ function budgetPop() {
     var div3 = document.createElement("div");
     var div4 = document.createElement("div");
     var div5 = document.createElement("div");
-    var div6 = document.createElement("div");
+    //var div6 = document.createElement("div");
     var div7 = document.createElement("div");
     var div8 = document.createElement("div");
 
@@ -29,7 +29,7 @@ function budgetPop() {
     div3.style.fontFamily = 'Major Mono Display';
     div4.style.fontFamily = 'Major Mono Display';
     div5.style.fontFamily = 'Major Mono Display';
-    div6.style.fontFamily = 'Major Mono Display';
+    //div6.style.fontFamily = 'Major Mono Display';
     div7.style.fontFamily = 'Major Mono Display';
     div8.style.fontFamily = 'Major Mono Display';
 
@@ -38,7 +38,7 @@ function budgetPop() {
     body.appendChild(div3);
     body.appendChild(div4);
     body.appendChild(div5);
-    body.appendChild(div6);
+    //body.appendChild(div6);
     body.appendChild(div7);
     body.appendChild(div8);
 
@@ -193,13 +193,13 @@ function budgetPop() {
     body.appendChild(b10);
 
     // piechart
-    div6.id = "piechart";
+    /* div6.id = "piechart";
     div6.style.width = "700px";
     div6.style.height = "350px";
     div6.style.paddingLeft = "19%";
     var b11  = document.createElement("br");
     body.appendChild(div6);
-    body.appendChild(b11);
+    body.appendChild(b11); */
 
     // Optional
     body.appendChild(div7);

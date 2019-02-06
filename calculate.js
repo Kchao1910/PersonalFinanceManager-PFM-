@@ -55,6 +55,19 @@ function calculate2() {
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
 
+        var div6 = document.createElement("div");
+        var b11  = document.createElement("br");
+
+        div6.id = "piechart";
+        div6.style.width = "700px";
+        div6.style.height = "350px";
+        div6.style.paddingLeft = "19%";
+        //div6.style.fontFamily = 'Major Mono Display';
+
+        tot.appendChild(div6);
+        tot.appendChild(b11);
+
+
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
       
@@ -152,6 +165,18 @@ function calculate2() {
         tot.appendChild(breakElement10);
         tot.appendChild(test3);
         tot.appendChild(breakElement6);
+        
+        var div6 = document.createElement("div");
+        var b11  = document.createElement("br");
+
+        div6.id = "piechart";
+        div6.style.width = "700px";
+        div6.style.height = "350px";
+        div6.style.paddingLeft = "19%";
+        //div6.style.fontFamily = 'Major Mono Display';
+
+        tot.appendChild(div6);
+        tot.appendChild(b11);
 
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(drawChart);
