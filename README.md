@@ -17,7 +17,9 @@ The goal of PFM-SYM is to allow users to visualize their finances through a simp
 
 # Getting Started
 * Clone the latest version of the PFM repository.<br>
-    >git clone https://github.com/Kchao1910/PersonalFinanceManager-PFM-.git
+    ```
+    git clone https://github.com/Kchao1910/PersonalFinanceManager-PFM-.git
+    ```
 * Once you saved the files, open pfm.html on either Chrome, Mozilla Firefox, or Edge.
 
 # Tutorial
