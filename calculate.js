@@ -88,13 +88,14 @@ function calculate2() {
                 fontName: 'Major Mono Display',
                 backgroundColor: 'transparent',
                 chartArea: {
-                    left: '20%',
-                    right: '20%',
+                    //left: '20%',
+                    //right: '20%',
                     width: '100%',
-                    height: '90%'
+                    height: '80%'
                 },
                 legend: {
                     fontName: 'Major Mono Display',
+                    position: 'bottom'
                 }
             };
 
@@ -185,13 +186,14 @@ function calculate2() {
                 fontName: 'Major Mono Display',
                 backgroundColor: 'transparent',
                 chartArea: {
-                    left: "20%",
-                    right: "20%",
+                    //left: "20%",
+                    //right: "20%",
                     width: "100%",
-                    height: "90%"
+                    height: "80%"
                 },
                 legend: {
                     fontName: 'Major Mono Display',
+                    position: 'bottom'
                 }
             };
 

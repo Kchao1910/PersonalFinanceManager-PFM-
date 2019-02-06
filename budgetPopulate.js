@@ -194,6 +194,9 @@ function budgetPop() {
 
     // piechart
     div6.id = "piechart";
+    div6.style.width = "700px";
+    div6.style.height = "350px";
+    div6.style.paddingLeft = "19%";
     var b11  = document.createElement("br");
     body.appendChild(div6);
     body.appendChild(b11);
