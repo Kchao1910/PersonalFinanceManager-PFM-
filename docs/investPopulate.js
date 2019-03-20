@@ -145,7 +145,6 @@ function investPop() {
     rateOfReturnStocks.style.textAlign = "center";
     
     // Instruction text
-    var IP = document.createTextNode("page is still in development.");
     var investDisclaimer = document.createTextNode("note: this is for education and is not a replacement for a cpa.");
 
     // break creation
@@ -222,7 +221,6 @@ function investPop() {
     btnRE.className = "Real Estate"; */
 
     // appending to DOM
-    body.appendChild(IP);
     body.appendChild(b43);
     body.appendChild(investDisclaimer);
     body.appendChild(portfolio);
