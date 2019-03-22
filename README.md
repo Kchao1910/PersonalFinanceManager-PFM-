@@ -1,6 +1,6 @@
 # PersonalFinanceManager (PFM-SYM)
 
-For best viewing use Chrome.
+For best viewing experience use Chrome.
 
 PFM-SYM (Personal Finance Manager - Save Your Money) is a web application focused on providing simple functionalities geared towards personal finance.
 
